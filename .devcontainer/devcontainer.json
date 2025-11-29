@@ -1,0 +1,18 @@
+{
+  "name": "GTSAM Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "forwardPorts": [
+    8888
+  ],
+  "postStartCommand": "jupyter lab --no-browser --ip=0.0.0.0 --NotebookApp.token='' --NotebookApp.disable_check_xsrf=True",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {}
+  },
+  "remoteUser": "vscode"
+}
